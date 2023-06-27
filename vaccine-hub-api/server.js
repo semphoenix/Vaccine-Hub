@@ -6,7 +6,7 @@ const authRoutes = require("./routes/auth"); // Import the cars router module
 const { NotFoundError } = require("./utils/errors"); //Import error handling
 
 const app = express();
-const PORT = 3001;
+const { PORT } = require("./config");
 
 app.use(cors()); // Enable CORS middleware to handle cross-origin requests
 app.use(morgan("dev")); // Use Morgan middleware with 'dev' format for request logging
